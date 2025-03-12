@@ -16,9 +16,11 @@ if (num < 1 || num > 5) {
     alert("Put a valid room number!");
 } else if (rooms[num - 1] === 1) {
     alert("Sorry, room ocuped.");
+    showStatus();
 } else {
     rooms[num - 1] = 1;
     alert(`Room ${num} reserved sucessfull.`);
+    showStatus();
 }
 };
 
@@ -28,13 +30,18 @@ if (num < 1 || num > 5) {
     alert("Put a valid room number!");
 } else if (rooms[num - 1] === 0) {
     alert(`The room ${num} is free now.`);
+    showStatus();
 } else {
     rooms[num - 1] = 0;
     alert(`Room ${num} successfully released.`);
+    showStatus();
 }
 };
 
+document.getElementById('menuBTN').addEventListener("click", menu);
+
 // Principal menu
+function menu() {
 while (true) {
     let option = prompt(`1. Show rooms status
 2. Reserv a room
@@ -57,3 +64,6 @@ Select an option:`);
         alert("Select a valid option!");
     }
 };
+};
+
+document.getElementById('menuBTN').addEventListener("click", menu);
