@@ -38,12 +38,12 @@ if (num < 1 || num > 5) {
 }
 };
 
-document.getElementById('menuBTN').addEventListener("click", menu);
-
 // Principal menu
 function menu() {
 while (true) {
-    let option = prompt(`1. Show rooms status
+    let option = prompt(`Principal menu
+
+1. Show rooms status
 2. Reserv a room
 3. Free up a room
 4. Exit
